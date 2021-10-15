@@ -1,12 +1,10 @@
 import React from 'react'
-import Spinner from './spinner'
 import FileUpload from './fileUpload'
+import ProgressBar from './progressBar'
 import '../../Assets/styles/fileUpload.css'
 const UploadFile = ()=>{
     return(
-        <div className="main">
             <FileUpload/>
-        </div>
     )
 
 }

@@ -1,16 +1,18 @@
+
 .site-layout-content {
-  min-height: 280px;
+  min-height: 74vh;
+  width: 96%;
   padding: 24px;
+  margin: 2% 2% 0 2%;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#components-layout-demo-top .logo {
-  float: left;
-  width: 120px;
-  height: 31px;
-  margin: 16px 24px 16px 0;
-  background: rgba(255, 255, 255, 0.3);
+.header{
+  display: flex;
 }
-.ant-row-rtl #components-layout-demo-top .logo {
-  float: right;
-  margin: 16px 0 16px 24px;
+.theme{
+  margin-left: auto;
+
 }

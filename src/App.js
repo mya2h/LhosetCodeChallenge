@@ -1,10 +1,9 @@
-import UploadFile from './Components/FileUpload'
-import Layout from './Components/Layout'
+import Layount from './Components/Layout'
 import 'antd/dist/antd.css';
 function App() {
   return (
-    <div>
-      <Layout/>
+    <div className="App">
+      <Layount/>
     </div>
   );
 }

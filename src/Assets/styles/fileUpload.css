@@ -1,10 +1,15 @@
-main{
+.dropzone{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 450px;
 }
-.fileUpload{
-  height: 200px;
-  width: 400px;
-  border: 1px solid black;
+.browse{
+  border: 1px solid #1890ff;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #000;
 }
