@@ -5,8 +5,8 @@ import '../../assets/styles/fileUpload.css'
 
 const UploadFile = () => {
 
-    const handleSubmit = (files, allFiles)=>{
-        submitFile()
+    const handleSubmit = (file)=>{
+        submitFile(file)
     }
     return (
         <FileUpload handleSubmit={handleSubmit} files={1} multiple={false}/>

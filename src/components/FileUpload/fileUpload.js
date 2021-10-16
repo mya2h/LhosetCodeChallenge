@@ -2,20 +2,20 @@ import 'react-dropzone-uploader/dist/styles.css'
 import Dropzone from 'react-dropzone-uploader'
 import uploadIcon from '../../assets/images/upload2.png'
 
-const FileUpload = ({handleSubmit,files,multiple}) => {
+const FileUpload = ({ handleSubmit, files, multiple }) => {
   const getUploadParams = () => {
     return { url: 'https://httpbin.org/post' }
   }
-  const handleChangeStatus = ({ meta }, status) => {
-    console.log(status, meta)
+  const handleChangeStatus = ({ meta }, status, file) => {
   }
   const onSubmit = (files, allFiles) => {
-    handleSubmit(files, allFiles)
+    console.log(files, allFiles)
+    handleSubmit(files[0].file)
     allFiles.forEach(f => f.remove())
   }
   const dropZoneLayout = () => (
     <div className="dropzone">
-      <img src={uploadIcon} width={100} height={70} alt="upload item"/>
+      <img src={uploadIcon} width={100} height={70} alt="upload item" />
       <div className="drag">
         <h2>Drag&Drop files here</h2>
       </div>
