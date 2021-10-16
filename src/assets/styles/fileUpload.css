@@ -3,13 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 250px;
-  width: 450px;
 }
 .browse{
   border: 1px solid #1890ff;
-  padding: 8px;
+  padding: 8px 13px 8px 13px;
   font-size: 14px;
   border-radius: 3px;
-  color: #000;
+  color: #1890ff;
 }

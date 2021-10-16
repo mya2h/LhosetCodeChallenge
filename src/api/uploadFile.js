@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const UploadFile = async (value)=>{
+export const submitFile = async (value)=>{
     const body = JSON.stringify(value)
     try{
         const res = await axios.post("https://jsonplaceholder.typicode.com/posts",body)

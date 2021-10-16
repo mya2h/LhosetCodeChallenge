@@ -1,0 +1,32 @@
+.site-layout-content {
+  min-height: 74vh;
+  width: 96%;
+  padding: 24px;
+  margin: 2% 2% 0 2%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  display: flex;
+}
+.theme{
+  margin-left: auto;
+}
+.theme h4{
+  color: #c5c5c5;
+}
+.logo{
+  color: #e4e4e4; 
+  font-family: "Great Vibes", cursive; 
+  font-size: 36px; 
+  line-height: 60px; 
+  font-weight: normal; 
+  text-align: center; 
+  margin-right: 3%;
+  font-style: italic;
+}
+.footer{
+  text-align: center;
+}
