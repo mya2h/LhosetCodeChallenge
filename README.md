@@ -71,10 +71,6 @@ Contains api calls
 
 Contains tests
 
-## URL
-
-The application has just one URL / which ties to *Layout* Component
-
 ## Resources
 
 **create-react-app**: The following link has all the commands that can be used with create-react-app
