@@ -6,27 +6,24 @@ const getBase64 = file => {
         let reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = () => {
-            baseURL = reader.result;
+            baseURL = reader.result.toString().replace(/^data:(.*,)?/, '');
             resolve(baseURL);
         };
     });
 };
 
 export const submitFile = async (value) => {
+    console.log(value)
     let upload = {
         File: '',
         Filename: value.name
     }
-    getBase64(value)
-        .then(result => {
-            upload.File = result;
-            console.log("File Is", upload.file);
-        })
-        .catch(err => {
-            console.log(err);
-        });
-    const body = JSON.stringify(upload)
     try {
+        const result = await getBase64(value)
+        console.log("result", result)
+        upload.File = result;
+        console.log(upload)
+        const body = JSON.stringify(upload)
         const res = await axios.post("https://jsonplaceholder.typicode.com/posts", body)
         console.log(res.data)
     }

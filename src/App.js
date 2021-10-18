@@ -1,13 +1,26 @@
-import React from 'react';
-import Layout from './components/Layout'
-import 'antd/dist/antd.css'
+import { useEffect, useState } from 'react';
+import { MainPage } from './layout/MainPage';
+import { LoaderPage } from './layout/LoaderPage'
+import { useThemeContext } from './components/ThemeProvider';
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true)
+  const { isDark } = useThemeContext()
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [loading])
+
+
+  const className = isDark ? 'dark' : ''
+
   return (
-    <div>
-      <Layout/>
+    <div className={className}>
+      {loading ? <LoaderPage /> : <MainPage />}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
