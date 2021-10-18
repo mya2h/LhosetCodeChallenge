@@ -4,7 +4,6 @@ import { useThemeContext } from "../../context/ThemeProvider"
 
 const PageHeader = () => {
     const { isDark, setIsDark } = useThemeContext()
-
     return (
         <Header className="header">
             <div className="logo">Lhoste</div>
