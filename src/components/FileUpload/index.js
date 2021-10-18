@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Spin } from 'antd';
-import 'react-dropzone-uploader/dist/styles.css'
+import { ShowAlert } from '../Alert'
+import { submitFile } from '../../api/uploadFile'
 import Dropzone from 'react-dropzone-uploader'
 import uploadIcon from '../../assets/images/upload2.png'
-import { submitFile } from '../../api/uploadFile'
+import 'react-dropzone-uploader/dist/styles.css'
 import '../../assets/styles/fileUpload.css'
-import { ShowAlert } from '../Alert'
 
 const FileUpload = () => {
     const [loading, setLoading] = useState(false)
@@ -23,8 +23,8 @@ const FileUpload = () => {
     const dropZoneLayout = () => (
         <div className="dropzone">
             <img src={uploadIcon} width={100} height={70} alt="upload item" />
-            <div className="drag">
-                <h2>Drag&Drop files here</h2>
+            <div>
+                <h2>Drag & Drop file here</h2>
             </div>
             <div>or</div>
             <div className="browse">

@@ -1,8 +1,8 @@
-import { Layout } from 'antd';
 import FileUpload from '../../components/FileUpload'
-import '../../assets/styles/layout.css'
-import PageHeader from '../../components/PageHeader';
+import PageHeader from '../../components/PageHeader'
 import PageFooter from '../../components/PageFooter'
+import { Layout } from 'antd';
+import '../../assets/styles/layout.css';
 
 const { Content } = Layout;
 

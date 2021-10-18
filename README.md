@@ -33,16 +33,35 @@ npm start
 
 The Application Runs on **localhost:3000**
 
-## Application design
+## Folder Structure
+### components
 
-#### Components
+1. **Alert** Component: This Component Contains alert messages
 
-1. **Layout** Component: This Component Contains the topbar and footer
+2. **FileUpload** Component: This Component contains the file upload box
 
-2. **FileUpload** Component: This Component displays the file upload box
+3. **PageFooter** Component: This Component contains the page footer
 
+4. **PageHeader** Componet: This Component contains the page header
 
-#### URL
+### layout
+
+1. **LoaderPage**: this folder contains component for the loading page
+2. **MainPage**: this folder contains components for the main page
+
+### assets
+
+Contains all the images and styles 
+
+### context
+
+Contains context for the theme
+
+### api
+
+Contains api calls
+
+## URL
 
 The application has just one URL / which ties to *Layout* Component
 

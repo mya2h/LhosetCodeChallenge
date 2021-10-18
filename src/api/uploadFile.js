@@ -2,12 +2,12 @@ import axios from 'axios'
 
 const getBase64 = file => {
     return new Promise(resolve => {
-        let baseURL = "";
+        let base64 = "";
         let reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = () => {
-            baseURL = reader.result.toString().replace(/^data:(.*,)?/, '');
-            resolve(baseURL);
+            base64 = reader.result.split(',')[1].toString();
+            resolve(base64);
         };
     });
 };

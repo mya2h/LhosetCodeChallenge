@@ -17,7 +17,13 @@
   font-size: 14px;
   border-radius: 3px;
   color: #1890ff;
+  margin-top: 5%;
 }
 .spinner{
   margin-top: 1%;
+}
+
+
+.dark .dzu-previewFileName{
+  color: azure;
 }
