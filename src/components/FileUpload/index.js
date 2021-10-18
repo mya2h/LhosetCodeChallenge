@@ -21,7 +21,7 @@ const FileUpload = () => {
         setLoading(true)
     }
     const dropZoneLayout = () => (
-        <div className="dropzone">
+        <div className="dropzone" key="dropzone">
             <img src={uploadIcon} width={100} height={70} alt="upload item" />
             <div>
                 <h2>Drag & Drop file here</h2>

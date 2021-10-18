@@ -31,6 +31,12 @@ In order to run the application Type the following command
 npm start
 ```
 
+In order to run test
+
+```bash
+npm run test
+```
+
 The Application Runs on **localhost:3000**
 
 ## Folder Structure
@@ -60,6 +66,10 @@ Contains context for the theme
 ### api
 
 Contains api calls
+
+### _test_
+
+Contains tests
 
 ## URL
 
