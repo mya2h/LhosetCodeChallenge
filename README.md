@@ -1,4 +1,4 @@
-# Lhoste Code Challenge
+# Lhotse Code Challenge
 
 ## Prerequisites
 
