@@ -4,10 +4,20 @@
   align-items: center;
   justify-content: center;
 }
+.dzu-dropzone{ 
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px dashed grey;
+ }
 .browse{
   border: 1px solid #1890ff;
   padding: 8px 13px 8px 13px;
   font-size: 14px;
   border-radius: 3px;
   color: #1890ff;
+}
+.spinner{
+  margin-top: 1%;
 }

@@ -9,10 +9,10 @@
 .site-layout-content {
   min-height: 74vh;
   width: 96%;
-  padding: 24px;
+  padding: 5% 5% 5% 5%;
   margin: 2% 2% 0 2%;
   background: #fff;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
 }

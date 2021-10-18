@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Spin } from 'antd';
 import 'react-dropzone-uploader/dist/styles.css'
 import Dropzone from 'react-dropzone-uploader'
 import uploadIcon from '../../assets/images/upload2.png'
 import { submitFile } from '../../api/uploadFile'
 import '../../assets/styles/fileUpload.css'
+import { ShowAlert } from '../Alert'
 
 const FileUpload = () => {
-    const getUploadParams = () => {
-        return { url: 'https://httpbin.org/post' }
-    }
-    const handleChangeStatus = ({ meta }, status, file) => {
+    const [loading, setLoading] = useState(false)
+    const getResponseMessage = (type, message) => {
+        ShowAlert(type, message)
+        if (message) {
+            setLoading(false)
+        }
     }
     const onSubmit = (files) => {
-        console.log(files)
-        submitFile(files[0].file)
+        submitFile(files[0].file, getResponseMessage)
         files.forEach(f => f.remove())
+        setLoading(true)
     }
     const dropZoneLayout = () => (
         <div className="dropzone">
@@ -29,18 +33,16 @@ const FileUpload = () => {
         </div>
     )
     return (
-        <Dropzone
-            getUploadParams={getUploadParams}
-            onChangeStatus={handleChangeStatus}
-            onSubmit={onSubmit}
-            inputContent={dropZoneLayout}
-            maxFiles={1}
-            multiple={false}
-            styles={{
-                dropzone: { width: '100%', maxWidth: '500px', height: 250, overflow: 'hidden', border: '1px dashed grey' },
-            }}
-        />
+        <div>
+            <Dropzone
+                getUploadParams={() => ({ url: 'https://httpbin.org/post' })}
+                onSubmit={onSubmit}
+                inputContent={dropZoneLayout}
+                maxFiles={1}
+                multiple={false}
+            />
+            {loading ? <Spin size="large" tip="File Uploading..." className="dropzone spinner" /> : null}
+        </div>
     )
-
 }
 export default FileUpload

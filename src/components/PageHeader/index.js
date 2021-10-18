@@ -1,6 +1,6 @@
 import { Switch } from "antd"
 import { Header } from "antd/lib/layout/layout"
-import { useThemeContext } from "../ThemeProvider"
+import { useThemeContext } from "../../context/ThemeProvider"
 
 const PageHeader = () => {
     const { isDark, setIsDark } = useThemeContext()

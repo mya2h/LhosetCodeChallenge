@@ -12,22 +12,24 @@ const getBase64 = file => {
     });
 };
 
-export const submitFile = async (value) => {
-    console.log(value)
+export const submitFile = async (value, getResponseMessage) => {
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
     let upload = {
         File: '',
         Filename: value.name
     }
     try {
         const result = await getBase64(value)
-        console.log("result", result)
         upload.File = result;
-        console.log(upload)
         const body = JSON.stringify(upload)
-        const res = await axios.post("https://jsonplaceholder.typicode.com/posts", body)
-        console.log(res.data)
+        await axios.post("https://jsonplaceholder.typicode.com/posts", body, config)
+        getResponseMessage("success", "File Uploaded successfully")
     }
     catch (error) {
-        console.log(error.response)
+        getResponseMessage("error", "Unable to upload File")
     }
 }

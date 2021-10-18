@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MainPage } from './layout/MainPage';
 import { LoaderPage } from './layout/LoaderPage'
-import { useThemeContext } from './components/ThemeProvider';
+import { useThemeContext } from './context/ThemeProvider';
 
 const App = () => {
   const [loading, setLoading] = useState(true)
